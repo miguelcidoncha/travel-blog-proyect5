@@ -52,14 +52,27 @@ nav {
     text-align: center;
 }
 
-#dropdown-content {
+#dropdown-content-E {
     border: 1px solid black;
     display: none;
-    text-align: center;
     list-style-type: none;
 }
 
-#discover-E:hover #dropdown-content {
+#dropdown-content-E ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+#dropdown-content-E li {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+#discover-E:hover #dropdown-content-E {
     display: block;
 }
 
@@ -68,6 +81,30 @@ nav {
     width: 25%;
     height: auto;
     text-align: center;
+}
+
+#dropdown-content-S {
+    border: 1px solid black;
+    display: none;
+    list-style-type: none;
+}
+
+#dropdown-content-S ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+#dropdown-content-S li {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+#discover-S:hover #dropdown-content-S {
+    display: block;
 }
 
 section {
