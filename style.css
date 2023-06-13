@@ -1,0 +1,84 @@
+header {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#logo {
+    border: 1px solid black;
+    width: 7%;
+    height: auto;
+    background-image: url(Resources/Images/Ejemplo\ logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#title {
+    border: 1px solid black;
+}
+
+#head_selection {
+    border: 1px solid black;
+    width: 15%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#head_about {
+    border: 1px solid black;
+}
+
+#head_login {
+    border: 1px solid black;
+}
+
+nav {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#discover-E {
+    border: 1px solid black;
+    width: 25%;
+    height: auto;
+    text-align: center;
+}
+
+#discover-S {
+    border: 1px solid black;
+    width: 25%;
+    height: auto;
+    text-align: center;
+}
+
+section {
+    border: 1px solid black;
+    width: 100%;
+    overflow: hidden;
+}
+
+main {
+    border: 1px solid black;
+    width: 75%;
+    float: left;
+}
+
+aside {
+    border: 1px solid black;
+    width: 24.7%;
+    float: right;
+}
+
+footer {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+}
