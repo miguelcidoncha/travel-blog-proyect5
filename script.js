@@ -5,3 +5,4 @@ discoverE.addEventListener("mouseleave", function() {
     let dropdownContentS = document.getElementById("dropdown-content-S");
     dropdownContentE.style.display = "none";
 });
+

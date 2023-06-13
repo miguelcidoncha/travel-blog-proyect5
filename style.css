@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 header {
     border: 1px solid black;
     width: 100%;
@@ -115,18 +119,50 @@ section {
 
 main {
     border: 1px solid black;
-    width: 85%;
-    float: left;
-}
-
-aside {
-    border: 1px solid black;
-    width: 14.7%;
-    float: right;
+    width: 100%;
 }
 
 footer {
     border: 1px solid black;
     width: 100%;
     height: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#contac {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#subscribe {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#policies {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#social-media {
+    border: 1px solid black;
+    width: 25%;
+    text-align: center;
+    margin: auto;
+}
+
+.icons {
+    font-size: 1.5625rem;
+}
+
+#copyright {
+    border: 1px solid black;
+    width: 25%;
+    text-align: center;
+    margin: auto;
 }
