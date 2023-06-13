@@ -52,6 +52,17 @@ nav {
     text-align: center;
 }
 
+#dropdown-content {
+    border: 1px solid black;
+    display: none;
+    text-align: center;
+    list-style-type: none;
+}
+
+#discover-E:hover #dropdown-content {
+    display: block;
+}
+
 #discover-S {
     border: 1px solid black;
     width: 25%;
@@ -67,13 +78,13 @@ section {
 
 main {
     border: 1px solid black;
-    width: 75%;
+    width: 85%;
     float: left;
 }
 
 aside {
     border: 1px solid black;
-    width: 24.7%;
+    width: 14.7%;
     float: right;
 }
 
