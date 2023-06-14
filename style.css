@@ -119,7 +119,14 @@ section {
 
 main {
     border: 1px solid black;
-    width: 100%;
+    width: 85%;
+    float: left;
+}
+
+aside {
+    border: 1px solid black;
+    width: 14.7%;
+    float: right;
 }
 
 footer {
