@@ -1,3 +1,5 @@
+function dorpdown () {
+
 let discoverE = document.getElementById("discover-E");
 let discoverS = document.getElementById("discover-S");
 discoverE.addEventListener("mouseleave", function () {
@@ -5,7 +7,7 @@ discoverE.addEventListener("mouseleave", function () {
     let dropdownContentS = document.getElementById("dropdown-content-S");
     dropdownContentE.style.display = "none";
 });
-
+}
 
 let map = L.map("map").setView([49.15, 14.94], 3)
 
@@ -22,3 +24,17 @@ L.marker([52.4004, 13.0583]).addTo(map);
 L.marker([50.0884, 14.4230]).addTo(map);
 L.marker([47.4977, 19.0407]).addTo(map);
 L.marker([42.6986, 23.3123]).addTo(map);
+
+function showContent(city) {
+
+    let mainContent = document.getElementById('main-content');
+    mainContent.style.backgroundImage = 'none';
+
+
+    let cityContents = document.getElementsByClassName('city-content');
+    for (var i = 0; i < cityContents.length; i++) {
+        cityContents[i].style.display = 'none';
+    }
+    let selectedCityContent = document.getElementById(city);
+    selectedCityContent.style.display = 'block';
+}

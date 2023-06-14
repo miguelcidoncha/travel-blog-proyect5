@@ -123,6 +123,15 @@ main {
     float: left;
 }
 
+#main-content {
+    background-image: url(Resources/Images/Plane.jpg);
+    background-size: contain;
+}
+
+.city-content {
+    display: none;
+}
+
 aside {
     border: 1px solid black;
     width: 24.7%;

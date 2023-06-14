@@ -36,31 +36,66 @@
             <h2>Discover Europe</h2>
             <div id="dropdown-content-E">
                 <ul>Destinos:</ul>
-                <li>Alemania</li>
-                <li>Bulgaria</li>
-                <li>Hungría</li>
-                <li>República Checa</li>
+                <li><a href="#" onclick="showContent('alemania')">Alemania</a></li>
+                <li><a href="#" onclick="showContent('bulgaria')">Bulgaria</a></li>
+                <li><a href="#" onclick="showContent('hungria')">Hungría</a></li>
+                <li><a href="#" onclick="showContent('checa')">República Checa</a></li>
             </div>
         </div>
         <div id="discover-S">
             <h2>Discover Spain</h2>
             <div id="dropdown-content-S">
                 <ul>Destinos:</ul>
-                <li>Barcelona</li>
-                <li>Granada</li>
-                <li>Mérida</li>
-                <li>Sevilla</li>
+                <li><a href="#" onclick="showContent('barcelona')">Barcelona</a></li>
+                <li><a href="#" onclick="showContent('granada')">Granada</a></li>
+                <li><a href="#" onclick="showContent('merida')">Mérida</a></li>
+                <li><a href="#" onclick="showContent('sevilla')">Sevilla</a></li>
             </div>
         </div>
     </nav>
     <hr>
     <section>
-        <main>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        <main id="main-content">
+            <section id="alemania" class="city-content">
+                <h2>Alemania</h2>
+                <p>Barcelona es una ciudad vibrante conocida por su rica historia, impresionante arquitectura y animada cultura.</p>
+                <img src="Alemania.jpg" alt="Alemania">
+            </section>
+            <section id="bulgaria" class="city-content">
+                <h2>Bulgaria</h2>
+                <p>Barcelona es una ciudad vibrante conocida por su rica historia, impresionante arquitectura y animada cultura.</p>
+                <img src="Bulgaria.jpg" alt="Bulgaria">
+            </section>
+            <section id="hungria" class="city-content">
+                <h2>Hungría</h2>
+                <p>Barcelona es una ciudad vibrante conocida por su rica historia, impresionante arquitectura y animada cultura.</p>
+                <img src="Hungría.jpg" alt="Hungría">
+            </section>
+            <section id="checa" class="city-content">
+                <h2>República Checa</h2>
+                <p>Barcelona es una ciudad vibrante conocida por su rica historia, impresionante arquitectura y animada cultura.</p>
+                <img src="RepúblicaCheca.jpg" alt="Checa">
+            </section>
+            <section id="barcelona" class="city-content">
+                <h2>Barcelona</h2>
+                <p>Barcelona es una ciudad vibrante conocida por su rica historia, impresionante arquitectura y animada cultura.</p>
+                <img src="barcelona.jpg" alt="Barcelona">
+            </section>
+            <section id="granada" class="city-content">
+                <h2>Granada</h2>
+                <p>Granada es la capital de España y se destaca por su vida nocturna, museos de clase mundial y hermosos parques.</p>
+                <img src="granada.jpg" alt="Granada">
+            </section>
+            <section id="merida" class="city-content">
+                <h2>Mérida</h2>
+                <p>Mérida es una ciudad vibrante conocida por su rica historia, impresionante arquitectura y animada cultura.</p>
+                <img src="barcelona.jpg" alt="Mérida">
+            </section>
+            <section id="sevilla" class="city-content">
+                <h2>Sevilla</h2>
+                <p>Sevilla es una ciudad costera famosa por su arquitectura moderna, playas hermosas y deliciosa paella.</p>
+                <img src="sevilla.jpg" alt="Sevilla">
+            </section>
         </main>
         <aside>
             <div id="map"></div>
