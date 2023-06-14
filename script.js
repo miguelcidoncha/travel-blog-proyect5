@@ -6,3 +6,19 @@ discoverE.addEventListener("mouseleave", function () {
     dropdownContentE.style.display = "none";
 });
 
+
+let map = L.map("map").setView([49.15, 14.94], 3)
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([37.3767, -5.9261]).addTo(map);
+L.marker([38.9168, -6.3451]).addTo(map);
+L.marker([37.1740, -3.5994]).addTo(map);
+L.marker([41.3820, 2.1794]).addTo(map);
+L.marker([52.5145, 13.3855]).addTo(map);
+L.marker([52.4004, 13.0583]).addTo(map);
+L.marker([50.0884, 14.4230]).addTo(map);
+L.marker([47.4977, 19.0407]).addTo(map);
+L.marker([42.6986, 23.3123]).addTo(map);
