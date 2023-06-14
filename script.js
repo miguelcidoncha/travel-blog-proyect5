@@ -1,12 +1,12 @@
-function dorpdown () {
+function dorpdown() {
 
-let discoverE = document.getElementById("discover-E");
-let discoverS = document.getElementById("discover-S");
-discoverE.addEventListener("mouseleave", function () {
-    let dropdownContentE = document.getElementById("dropdown-content-E");
-    let dropdownContentS = document.getElementById("dropdown-content-S");
-    dropdownContentE.style.display = "none";
-});
+    let discoverE = document.getElementById("discover-E");
+    let discoverS = document.getElementById("discover-S");
+    discoverE.addEventListener("mouseleave", function () {
+        let dropdownContentE = document.getElementById("dropdown-content-E");
+        let dropdownContentS = document.getElementById("dropdown-content-S");
+        dropdownContentE.style.display = "none";
+    });
 }
 
 let map = L.map("map").setView([49.15, 14.94], 3)
@@ -38,3 +38,4 @@ function showContent(city) {
     let selectedCityContent = document.getElementById(city);
     selectedCityContent.style.display = 'block';
 }
+
