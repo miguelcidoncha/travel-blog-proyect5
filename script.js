@@ -9,12 +9,37 @@ function dorpdown() {
     });
 }
 
+// function openLoginModal() {
+//     document.getElementById("loginModal").style.display = "block";
+// }
+
+// function closeLoginModal() {
+//     document.getElementById("loginModal").style.display = "none";
+// }
+
 function openLoginModal() {
     document.getElementById("loginModal").style.display = "block";
 }
 
 function closeLoginModal() {
     document.getElementById("loginModal").style.display = "none";
+}
+
+function handleLogin(event) {
+    event.preventDefault();
+    
+    // Obtenemos el nombre de usuario ingresado en el formulario
+    const username = document.getElementById("usernameInput").value;
+    
+    // Actualizamos el contenido del encabezado con el nombre de usuario
+    document.getElementById("username").textContent = username;
+    
+    // Mostramos el elemento del nombre de usuario y ocultamos el de inicio de sesión
+    document.getElementById("head_login").style.display = "none";
+    document.getElementById("head_username").style.display = "block";
+    
+    // Cerramos la ventana flotante
+    closeLoginModal();
 }
 
 
