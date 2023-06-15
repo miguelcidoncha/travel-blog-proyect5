@@ -25,17 +25,27 @@ L.marker([50.0884, 14.4230]).addTo(map);
 L.marker([47.4977, 19.0407]).addTo(map);
 L.marker([42.6986, 23.3123]).addTo(map);
 
-function showContent(city) {
 
+function showContent(city) {
     let mainContent = document.getElementById('main-content');
     mainContent.style.backgroundImage = 'none';
-
 
     let cityContents = document.getElementsByClassName('city-content');
     for (var i = 0; i < cityContents.length; i++) {
         cityContents[i].style.display = 'none';
     }
+
     let selectedCityContent = document.getElementById(city);
     selectedCityContent.style.display = 'block';
-}
 
+    let buttonInfo = selectedCityContent.querySelector('.buttonInformation');
+    let addContent = selectedCityContent.querySelector('.addContent');
+
+    buttonInfo.addEventListener('click', function () {
+        if (addContent.style.display === 'none') {
+            addContent.style.display = 'block';
+        } else {
+            addContent.style.display = 'none';
+        }
+    });
+}
