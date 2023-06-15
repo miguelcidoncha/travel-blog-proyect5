@@ -24,19 +24,6 @@ header {
     border: 1px solid black;
 }
 
-#head_selection {
-    border: 1px solid black;
-    width: 15%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#head_about {
-    border: 1px solid black;
-}
 
 #head_login {
     border: 1px solid black;

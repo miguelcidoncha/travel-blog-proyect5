@@ -27,18 +27,13 @@ function closeLoginModal() {
 
 function handleLogin(event) {
     event.preventDefault();
-    
-    // Obtenemos el nombre de usuario ingresado en el formulario
+
     const username = document.getElementById("usernameInput").value;
     
-    // Actualizamos el contenido del encabezado con el nombre de usuario
     document.getElementById("username").textContent = username;
-    
-    // Mostramos el elemento del nombre de usuario y ocultamos el de inicio de sesión
     document.getElementById("head_login").style.display = "none";
     document.getElementById("head_username").style.display = "block";
     
-    // Cerramos la ventana flotante
     closeLoginModal();
 }
 
@@ -49,15 +44,15 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.marker([37.3767, -5.9261]).addTo(map);
-L.marker([38.9168, -6.3451]).addTo(map);
-L.marker([37.1740, -3.5994]).addTo(map);
-L.marker([41.3820, 2.1794]).addTo(map);
-L.marker([52.5145, 13.3855]).addTo(map);
-L.marker([52.4004, 13.0583]).addTo(map);
-L.marker([50.0884, 14.4230]).addTo(map);
-L.marker([47.4977, 19.0407]).addTo(map);
-L.marker([42.6986, 23.3123]).addTo(map);
+L.marker([37.3767, -5.9261]).addTo(map).bindPopup("Sevilla");
+L.marker([38.9168, -6.3451]).addTo(map).bindPopup("Mérida");
+L.marker([37.1740, -3.5994]).addTo(map).bindPopup("Granada");
+L.marker([41.3820, 2.1794]).addTo(map).bindPopup("Barcelona");
+L.marker([52.5145, 13.3855]).addTo(map).bindPopup("Berlín");
+L.marker([52.4004, 13.0583]).addTo(map).bindPopup("Postdam");
+L.marker([50.0884, 14.4230]).addTo(map).bindPopup("Praga");
+L.marker([47.4977, 19.0407]).addTo(map).bindPopup("Budapest");
+L.marker([42.6986, 23.3123]).addTo(map).bindPopup("Sofía");
 
 
 function showContent(city) {
@@ -83,3 +78,15 @@ function showContent(city) {
         }
     });
 }
+
+function showMain() {
+    var dropdownContentE = document.getElementById("dropdown-content-E");
+    var mainContent = document.getElementById("main-content");
+    var newEntry = document.getElementById("new-entry");
+
+    dropdownContentE.style.display = "none";
+    mainContent.style.display = "block";
+    mainContent.innerHTML = ""; // Eliminar cualquier contenido existente en el <main>
+    mainContent.appendChild(newEntry); // Agregar el contenido de "Nueva entrada" al <main>
+    newEntry.style.display = "block";
+  }
