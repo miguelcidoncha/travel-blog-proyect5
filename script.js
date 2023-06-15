@@ -29,11 +29,11 @@ function handleLogin(event) {
     event.preventDefault();
 
     const username = document.getElementById("usernameInput").value;
-    
+
     document.getElementById("username").textContent = username;
     document.getElementById("head_login").style.display = "none";
     document.getElementById("head_username").style.display = "block";
-    
+
     closeLoginModal();
 }
 
@@ -78,15 +78,3 @@ function showContent(city) {
         }
     });
 }
-
-function showMain() {
-    var dropdownContentE = document.getElementById("dropdown-content-E");
-    var mainContent = document.getElementById("main-content");
-    var newEntry = document.getElementById("new-entry");
-
-    dropdownContentE.style.display = "none";
-    mainContent.style.display = "block";
-    mainContent.innerHTML = ""; // Eliminar cualquier contenido existente en el <main>
-    mainContent.appendChild(newEntry); // Agregar el contenido de "Nueva entrada" al <main>
-    newEntry.style.display = "block";
-  }
