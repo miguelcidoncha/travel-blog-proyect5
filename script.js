@@ -9,14 +9,6 @@ function dorpdown() {
     });
 }
 
-// function openLoginModal() {
-//     document.getElementById("loginModal").style.display = "block";
-// }
-
-// function closeLoginModal() {
-//     document.getElementById("loginModal").style.display = "none";
-// }
-
 function openLoginModal() {
     document.getElementById("loginModal").style.display = "block";
 }
@@ -60,7 +52,7 @@ function showContent(city) {
     mainContent.style.backgroundImage = 'none';
 
     let cityContents = document.getElementsByClassName('city-content');
-    for (var i = 0; i < cityContents.length; i++) {
+    for (let i = 0; i < cityContents.length; i++) {
         cityContents[i].style.display = 'none';
     }
 
