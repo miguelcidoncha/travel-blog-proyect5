@@ -151,6 +151,11 @@ main {
     background-size: cover;
 }
 
+.images {
+    width: 100%;
+    height: auto;
+}
+
 .addContent {
     display: none;
 }
