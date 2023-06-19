@@ -1,69 +1,30 @@
+@font-face {
+    font-family: Jockey;
+    src: url(Resources/Letters/Jockey.otf);
+}
+
 body {
     margin: 0;
+    font-family: Jockey;
+    background-image: url(Resources/Images/Plane.jpg);
+    background-size: cover;
+    background-position: center;
+    color: black;
 }
 
 header {
     border: 1px solid black;
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    height: 9.375rem;
 }
 
 #logo {
     border: 1px solid black;
-    width: 7%;
-    height: auto;
-    background-image: url(Resources/Images/Ejemplo\ logo.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#title {
-    border: 1px solid black;
-}
-
-
-#head_login {
-    border: 1px solid black;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
+    border-radius: 50%;
+    width: 25%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    margin-left: 35%;
 }
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 
 nav {
     border: 1px solid black;
@@ -146,11 +107,6 @@ main {
     float: left;
 }
 
-#main-content {
-    background-image: url(Resources/Images/Travel\ Europe.jpg);
-    background-size: cover;
-}
-
 .images {
     width: 100%;
     height: auto;
@@ -195,16 +151,19 @@ section {
 #contac {
     border: 1px solid black;
     text-align: center;
+    backdrop-filter: blur(.625rem);
 }
 
 #subscribe {
     border: 1px solid black;
     text-align: center;
+    backdrop-filter: blur(.625rem);
 }
 
 #policies {
     border: 1px solid black;
     text-align: center;
+    backdrop-filter: blur(.625rem);
 }
 
 #social-media {
@@ -212,6 +171,7 @@ section {
     width: 25%;
     text-align: center;
     margin: auto;
+    backdrop-filter: blur(.625rem);
 }
 
 .icons {
@@ -223,4 +183,5 @@ section {
     width: 25%;
     text-align: center;
     margin: auto;
+    backdrop-filter: blur(.625rem);
 }

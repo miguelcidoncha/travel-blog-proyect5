@@ -9,27 +9,6 @@ function dorpdown() {
     });
 }
 
-function openLoginModal() {
-    document.getElementById("loginModal").style.display = "block";
-}
-
-function closeLoginModal() {
-    document.getElementById("loginModal").style.display = "none";
-}
-
-function handleLogin(event) {
-    event.preventDefault();
-
-    const username = document.getElementById("usernameInput").value;
-
-    document.getElementById("username").textContent = username;
-    document.getElementById("head_login").style.display = "none";
-    document.getElementById("head_username").style.display = "block";
-
-    closeLoginModal();
-}
-
-
 let map = L.map("map").setView([49.15, 14.94], 3)
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
