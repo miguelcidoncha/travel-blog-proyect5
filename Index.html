@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Europe</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -24,179 +25,31 @@
             <h2>Discover Europe</h2>
             <div id="dropdown-content-E">
                 <ul>Destinos:</ul>
-                <li><a href="#" onclick="showContent('berlin')">Berlín</a></li>
-                <li><a href="#" onclick="showContent('sofia')">Sofía</a></li>
-                <li><a href="#" onclick="showContent('budapest')">Budapest</a></li>
-                <li><a href="#" onclick="showContent('praga')">Praga</a></li>
+                <li><a href="#" onclick="loadSubPage('discover.html', 'berlin')">Berlín</a></li>
+                <li><a href="#" onclick="loadSubPage('discover.html', 'sofia')">Sofía</a></li>
+                <li><a href="#" onclick="loadSubPage('discover.html', 'budapest')">Budapest</a></li>
+                <li><a href="#" onclick="loadSubPage('discover.html', 'praga')">Praga</a></li>
             </div>
         </div>
         <div id="discover-S">
             <h2>Discover Spain</h2>
             <div id="dropdown-content-S">
                 <ul>Destinos:</ul>
-                <li><a href="#" onclick="showContent('barcelona')">Barcelona</a></li>
-                <li><a href="#" onclick="showContent('granada')">Granada</a></li>
-                <li><a href="#" onclick="showContent('merida')">Mérida</a></li>
-                <li><a href="#" onclick="showContent('sevilla')">Sevilla</a></li>
+                <li><a href="#" onclick="loadSubPage('discover.html', 'barcelona')">Barcelona</a></li>
+                <li><a href="#" onclick="loadSubPage('discover.html', 'granada')">Granada</a></li>
+                <li><a href="#" onclick="loadSubPage('discover.html', 'merida')">Mérida</a></li>
+                <li><a href="#" onclick="loadSubPage('discover.html', 'sevilla')">Sevilla</a></li>
             </div>
         </div>
     </nav>
     <hr>
     <section>
-        <main id="main-content">
-            <article id="berlin" class="city-content">
-                <h2>Berlín</h2>
-                <img class="images" src="Resources/Images/Berlin.jpg" alt="Berlín">
-                <p>Berlín es una ciudad vibrante y multicultural en Alemania, reconocida por su rica historia, marcada
-                    por el Muro de Berlín y monumentos como la Puerta de Brandeburgo. Además, Berlín destaca por su
-                    escena artística, su ambiente alternativo y su arquitectura moderna, convirtiéndola en un destino
-                    cosmopolita y fascinante.</p>
-                <button class="buttonInformation">+info</button>
-                <div class="addContent">
-                    <p>Información adicional sobre Alemania que se mostrará al hacer clic en +info</p>
-                    <ul>
-                        <li>Dato adicional 1</li>
-                        <li>Dato adicional 2</li>
-                        <li>Dato adicional 3</li>
-                    </ul>
-                </div>
-            </article>
-            <article id="sofia" class="city-content">
-                <h2>Sofía</h2>
-                <img class="images" src="Resources/Images/Sofia.jpg" alt="Sofía">
-                <p>Sofía es la capital de Bulgaria, una ciudad en constante transformación que combina su legado
-                    histórico con una atmósfera moderna y animada. Con sus impresionantes iglesias ortodoxas, parques
-                    encantadores y una emocionante escena cultural, Sofía cautiva a los visitantes con su encanto único
-                    en Europa del Este.</p>
-                <button class="buttonInformation">+info</button>
-                <div class="addContent">
-                    <p>Información adicional sobre Alemania que se mostrará al hacer clic en +info</p>
-                    <ul>
-                        <li>Dato adicional 1</li>
-                        <li>Dato adicional 2</li>
-                        <li>Dato adicional 3</li>
-                    </ul>
-                </div>
-            </article>
-            <article id="budapest" class="city-content">
-                <h2>Budapest</h2>
-                <img class="images" src="Resources/Images/Budapest.jpg" alt="Budapest">
-                <p>Budapest, la capital de Hungría, es una joya europea con una mezcla perfecta de historia y belleza
-                    arquitectónica. Con sus imponentes puentes sobre el río Danubio, sus famosos baños termales y su
-                    ambiente bohemio, Budapest cautiva a los visitantes con su encanto singular.</p>
-                <button class="buttonInformation">+info</button>
-                <div class="addContent">
-                    <p>Información adicional sobre Alemania que se mostrará al hacer clic en +info</p>
-                    <ul>
-                        <li>Dato adicional 1</li>
-                        <li>Dato adicional 2</li>
-                        <li>Dato adicional 3</li>
-                    </ul>
-                </div>
-            </article>
-            <article id="praga" class="city-content">
-                <h2>Praga</h2>
-                <img class="images" src="Resources/Images/Praga.jpg" alt="Praga">
-                <p>Praga, la capital de la República Checa, es una ciudad de cuento de hadas con su impresionante
-                    arquitectura gótica, sus estrechas calles empedradas y su majestuoso Castillo de Praga. Con su
-                    ambiente romántico y su rica historia, Praga es un destino imperdible para los amantes del arte y la
-                    cultura.</p>
-                <button class="buttonInformation">+info</button>
-                <div class="addContent">
-                    <p>Información adicional sobre Alemania que se mostrará al hacer clic en +info</p>
-                    <ul>
-                        <li>Dato adicional 1</li>
-                        <li>Dato adicional 2</li>
-                        <li>Dato adicional 3</li>
-                    </ul>
-                </div>
-            </article>
-            <article id="barcelona" class="city-content">
-                <h2>Barcelona</h2>
-                <img class="images" src="Resources/Images/Barcelona.jpg" alt="Barcelona">
-                <p>Barcelona es una ciudad vibrante y cosmopolita en la costa mediterránea, conocida por su arquitectura
-                    única, como la Sagrada Familia y el Parque Güell, así como por su animada vida nocturna y sus
-                    hermosas playas. Con una rica oferta cultural y gastronómica, Barcelona ofrece una experiencia
-                    inolvidable para sus visitantes.</p>
-                <button class="buttonInformation">+info</button>
-                <div class="addContent">
-                    <p>Información adicional sobre Alemania que se mostrará al hacer clic en +info</p>
-                    <ul>
-                        <li>Dato adicional 1</li>
-                        <li>Dato adicional 2</li>
-                        <li>Dato adicional 3</li>
-                    </ul>
-                </div>
-            </article>
-            <article id="granada" class="city-content">
-                <h2>Granada</h2>
-                <img class="images" src="Resources/Images/Granada.jpg" alt="Granada">
-                <p>Granada es una ciudad mágica en el sur de España, famosa por su icónico Palacio de la Alhambra, que
-                    combina la arquitectura islámica y cristiana. Además, sus estrechas calles del Albaicín, su rica
-                    historia y su ambiente bohemio la convierten en un lugar fascinante para visitar.</p>
-                <button class="buttonInformation">+info</button>
-                <div class="addContent">
-                    <p>Información adicional sobre Alemania que se mostrará al hacer clic en +info</p>
-                    <ul>
-                        <li>Dato adicional 1</li>
-                        <li>Dato adicional 2</li>
-                        <li>Dato adicional 3</li>
-                    </ul>
-                </div>
-            </article>
-            <article id="merida" class="city-content">
-                <h2>Mérida</h2>
-                <img class="images" src="Resources/Images/Mérida.jpg" alt="Mérida">
-                <p>Mérida es una histórica ciudad en el suroeste de España, famosa por su impresionante conjunto
-                    arqueológico romano, que incluye un teatro, un anfiteatro y un acueducto, que reflejan su rica
-                    herencia cultural. Además, Mérida cuenta con encantadoras calles empedradas y una atmósfera
-                    tranquila que invita a explorar su patrimonio histórico.</p>
-                <button class="buttonInformation">+info</button>
-                <div class="addContent">
-                    <p>Información adicional sobre Alemania que se mostrará al hacer clic en +info</p>
-                    <ul>
-                        <li>Dato adicional 1</li>
-                        <li>Dato adicional 2</li>
-                        <li>Dato adicional 3</li>
-                    </ul>
-                </div>
-            </article>
-            <article id="sevilla" class="city-content">
-                <h2>Sevilla</h2>
-                <img class="images" src="Resources/Images/Sevilla.jpg" alt="Sevilla">
-                <p>Sevilla es una ciudad cautivadora en el sur de España, conocida por su animada cultura flamenca, su
-                    majestuosa catedral gótica y su impresionante alcázar real. Con su clima cálido y sus encantadoras
-                    calles llenas de vida, Sevilla es un destino imperdible para los amantes de la historia y la
-                    autenticidad española.</p>
-                <button class="buttonInformation">+info</button>
-                <div class="addContent">
-                    <p>Información adicional sobre Alemania que se mostrará al hacer clic en +info</p>
-                    <ul>
-                        <li>Dato adicional 1</li>
-                        <li>Dato adicional 2</li>
-                        <li>Dato adicional 3</li>
-                    </ul>
-                </div>
-            </article>
-            <article id="content-container"></article>
-        </main>
+        <main id="main-content"></main>
         <aside>
             <div id="map"></div><br>
-            <button onclick="newPost()">Nueva publicación</button>
-            <form id="addForm" onsubmit="sendForm(event)">
-                <label for="title">Título:</label>
-                <input type="text" id="new-title" name="title" required><br>
-
-                <label for="image">Añadir imagen:</label>
-                <input type="file" id="new-image" name="image"><br>
-
-                <label for="text">Añadir texto:</label>
-                <textarea id="new-text" name="text" required></textarea><br>
-
-                <input type="submit" value="Submit">
-            </form>
         </aside>
     </section>
+    <hr>
     <footer>
         <section>
             <div id="contac">
@@ -217,9 +70,6 @@
                 <h4>Preguntas Frecuentes (FAQ)</h4>
                 <h4>Política de Privacidad</h4>
                 <h4>Política de Cookies</h4>
-            </div>
-            <div id="admin">
-                <h2><a href="admin.html">Administrador</a></h2>
             </div>
         </section>
         <hr>

@@ -1,3 +1,4 @@
+//CONFIG INICIALES
 function dorpdown() {
 
     let discoverE = document.getElementById("discover-E");
@@ -25,7 +26,17 @@ L.marker([50.0884, 14.4230]).addTo(map).bindPopup("Praga");
 L.marker([47.4977, 19.0407]).addTo(map).bindPopup("Budapest");
 L.marker([42.6986, 23.3123]).addTo(map).bindPopup("Sofía");
 
+let loadSubPage = function (viewLocation, country) {
+    let mainContent = $("#main-content");
 
+    function loadCallback() {
+        showContent(country);
+    };
+
+    mainContent.load(viewLocation, loadCallback);
+}
+
+//DISCOVER
 function showContent(city) {
     let mainContent = document.getElementById('main-content');
     mainContent.style.backgroundImage = 'none';
@@ -50,29 +61,13 @@ function showContent(city) {
     });
 }
 
-function newPost() {
-    let form = document.getElementById("addForm");
-    form.style.display = "block";
-}
 
-
-function sendForm(event) {
-    event.preventDefault();
-
-    let newtitle = document.getElementById("new-title").value;
-    let newimage = document.getElementById("new-image").value;
-    let newtext = document.getElementById("new-text").value;
-
-    let content = "<h2>" + newtitle + "</h2>";
-    content += "<img src='" + newimage + "' alt='Imagen'>";
-    content += "<p>" + newtext + "</p>";
-
-    let contentContainer = document.getElementById("content-container");
-    contentContainer.innerHTML += content;
-
-    document.getElementById("new-title").value = "";
-    document.getElementById("new-image").value = "";
-    document.getElementById("new-text").value = "";
-
-    document.getElementById("addForm").style.display = "none";
-}
+// function encodeImageFileAsURL(fileInput) {
+//     var file = fileInput.files[0];
+//     var reader = new FileReader();
+//     reader.readAsDataURL(file);
+//     reader.onloadend = function () {
+//         UI.gallery.newEntry.imgDataURL = reader.result;
+//         addEntry(UI.gallery.newEntry, true);
+//     };
+// };
