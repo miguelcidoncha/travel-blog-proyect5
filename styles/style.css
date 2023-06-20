@@ -1,12 +1,12 @@
 @font-face {
     font-family: Jockey;
-    src: url(Resources/Letters/Jockey.otf);
+    src: url(../Resources/Letters/Jockey.otf);
 }
 
 body {
     margin: 0;
     font-family: Jockey;
-    background-image: url(Resources/Images/Plane.jpg);
+    background-image: url(../Resources/Images/Plane.jpg);
     background-size: cover;
     background-position: center;
     color: black;
@@ -31,6 +31,12 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+#news {
+    width: 25%;
+    height: auto;
+    text-align: center;
 }
 
 #discover-E {
@@ -93,6 +99,12 @@ nav {
 
 #discover-S:hover #dropdown-content-S {
     display: block;
+}
+
+#admin {
+    width: 25%;
+    height: auto;
+    text-align: center;
 }
 
 section {

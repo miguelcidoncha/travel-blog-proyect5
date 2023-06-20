@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Europe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -21,25 +21,31 @@
     </header>
     <hr>
     <nav>
+        <div id="news">
+            <h2>Noticias</h2>
+        </div>
         <div id="discover-E">
             <h2>Discover Europe</h2>
             <div id="dropdown-content-E">
                 <ul>Destinos:</ul>
-                <li><a href="#" onclick="loadSubPage('discover.html', 'berlin')">Berlín</a></li>
-                <li><a href="#" onclick="loadSubPage('discover.html', 'sofia')">Sofía</a></li>
-                <li><a href="#" onclick="loadSubPage('discover.html', 'budapest')">Budapest</a></li>
-                <li><a href="#" onclick="loadSubPage('discover.html', 'praga')">Praga</a></li>
+                <li><a href="#" onclick="loadSubPage('Views/discover.html', 'berlin')">Berlín</a></li>
+                <li><a href="#" onclick="loadSubPage('Views/discover.html', 'sofia')">Sofía</a></li>
+                <li><a href="#" onclick="loadSubPage('Views/discover.html', 'budapest')">Budapest</a></li>
+                <li><a href="#" onclick="loadSubPage('Views/discover.html', 'praga')">Praga</a></li>
             </div>
         </div>
         <div id="discover-S">
             <h2>Discover Spain</h2>
             <div id="dropdown-content-S">
                 <ul>Destinos:</ul>
-                <li><a href="#" onclick="loadSubPage('discover.html', 'barcelona')">Barcelona</a></li>
-                <li><a href="#" onclick="loadSubPage('discover.html', 'granada')">Granada</a></li>
-                <li><a href="#" onclick="loadSubPage('discover.html', 'merida')">Mérida</a></li>
-                <li><a href="#" onclick="loadSubPage('discover.html', 'sevilla')">Sevilla</a></li>
+                <li><a href="#" onclick="loadSubPage('Views/discover.html', 'barcelona')">Barcelona</a></li>
+                <li><a href="#" onclick="loadSubPage('Views/discover.html', 'granada')">Granada</a></li>
+                <li><a href="#" onclick="loadSubPage('Views/discover.html', 'merida')">Mérida</a></li>
+                <li><a href="#" onclick="loadSubPage('Views/discover.html', 'sevilla')">Sevilla</a></li>
             </div>
+        </div>
+        <div id="admin">
+            <h2>Admin.</h2>
         </div>
     </nav>
     <hr>
@@ -90,7 +96,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

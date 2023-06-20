@@ -1,15 +1,3 @@
-//CONFIG INICIALES
-function dorpdown() {
-
-    let discoverE = document.getElementById("discover-E");
-    let discoverS = document.getElementById("discover-S");
-    discoverE.addEventListener("mouseleave", function () {
-        let dropdownContentE = document.getElementById("dropdown-content-E");
-        let dropdownContentS = document.getElementById("dropdown-content-S");
-        dropdownContentE.style.display = "none";
-    });
-}
-
 let map = L.map("map").setView([49.15, 14.94], 3)
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -25,6 +13,18 @@ L.marker([52.4004, 13.0583]).addTo(map).bindPopup("Postdam");
 L.marker([50.0884, 14.4230]).addTo(map).bindPopup("Praga");
 L.marker([47.4977, 19.0407]).addTo(map).bindPopup("Budapest");
 L.marker([42.6986, 23.3123]).addTo(map).bindPopup("Sofía");
+
+//CONFIG INICIALES
+function dorpdown() {
+
+    let discoverE = document.getElementById("discover-E");
+    let discoverS = document.getElementById("discover-S");
+    discoverE.addEventListener("mouseleave", function () {
+        let dropdownContentE = document.getElementById("dropdown-content-E");
+        let dropdownContentS = document.getElementById("dropdown-content-S");
+        dropdownContentE.style.display = "none";
+    });
+}
 
 let loadSubPage = function (viewLocation, country) {
     let mainContent = $("#main-content");
@@ -61,6 +61,23 @@ function showContent(city) {
     });
 }
 
+let loadAdmin = function(viewLocation) {
+    let mainContent = $("#main-content");
+  
+    function loadCallback() {
+      console.log("Contenido de admin.html cargado exitosamente");
+    }
+  
+    mainContent.load(viewLocation, loadCallback);
+  };
+  
+  $(document).ready(function() {
+    $("#admin").click(function() {
+      loadAdmin("Views/admin.html");
+    });
+  });
+  
+  
 
 // function encodeImageFileAsURL(fileInput) {
 //     var file = fileInput.files[0];
@@ -71,3 +88,4 @@ function showContent(city) {
 //         addEntry(UI.gallery.newEntry, true);
 //     };
 // };
+

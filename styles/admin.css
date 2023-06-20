@@ -1,0 +1,23 @@
+#new-entry {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+#title-input{
+    width: 35%;
+    text-align: center;
+}
+
+
+#content-input{
+    width: 35%;
+    text-align: center;
+}
+
+button {
+    font-size: 100%;
+}
+
