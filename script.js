@@ -49,3 +49,30 @@ function showContent(city) {
         }
     });
 }
+
+function newPost() {
+    let form = document.getElementById("addForm");
+    form.style.display = "block";
+}
+
+
+function sendForm(event) {
+    event.preventDefault();
+
+    let newtitle = document.getElementById("new-title").value;
+    let newimage = document.getElementById("new-image").value;
+    let newtext = document.getElementById("new-text").value;
+
+    let content = "<h2>" + newtitle + "</h2>";
+    content += "<img src='" + newimage + "' alt='Imagen'>";
+    content += "<p>" + newtext + "</p>";
+
+    let contentContainer = document.getElementById("content-container");
+    contentContainer.innerHTML += content;
+
+    document.getElementById("new-title").value = "";
+    document.getElementById("new-image").value = "";
+    document.getElementById("new-text").value = "";
+
+    document.getElementById("addForm").style.display = "none";
+}

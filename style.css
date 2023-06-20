@@ -136,6 +136,10 @@ aside {
     height: 50%;
 }
 
+#addForm {
+    display: none;
+}
+
 footer {
     border: 1px solid black;
     width: 100%;
