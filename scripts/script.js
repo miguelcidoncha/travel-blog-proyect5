@@ -77,15 +77,19 @@ let loadAdmin = function(viewLocation) {
     });
   });
   
+
+  let loadNews = function(viewLocation) {
+    let mainContent = $("#main-content");
   
-
-// function encodeImageFileAsURL(fileInput) {
-//     var file = fileInput.files[0];
-//     var reader = new FileReader();
-//     reader.readAsDataURL(file);
-//     reader.onloadend = function () {
-//         UI.gallery.newEntry.imgDataURL = reader.result;
-//         addEntry(UI.gallery.newEntry, true);
-//     };
-// };
-
+    function loadCallback() {
+      console.log("Contenido de admin.html cargado exitosamente");
+    }
+  
+    mainContent.load(viewLocation, loadCallback);
+  };
+  
+  $(document).ready(function() {
+    $("#news").click(function() {
+      loadAdmin("Views/newdestination.html");
+    });
+  });

@@ -78,11 +78,7 @@ entryContent.addEventListener('click', function (event) {
         post.remove();
 
         console.log('Eliminar');
-    } else if (target.classList.contains('send-button')) {
-        const post = target.closest('.post');
-        const title = post.querySelector('h3').textContent;
-        const content = post.querySelector('p').textContent;
 
-        console.log('Enviar:', title, content);
     }
 });
+
