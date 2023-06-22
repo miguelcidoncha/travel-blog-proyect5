@@ -59,13 +59,11 @@ body {
 }
 
 header {
-    /* border: 1px solid black; */
     width: 100%;
     height: 9.375rem;
 }
 
 #logo {
-    /* border: 1px solid black; */
     border-radius: 50%;
     width: 25%;
     height: 100%;
@@ -73,7 +71,6 @@ header {
 }
 
 nav {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -86,14 +83,12 @@ nav {
 }
 
 #discover-E {
-    /* border: 1px solid black; */
     width: 25%;
     height: auto;
     text-align: center;
 }
 
 #dropdown-content-E {
-    /* border: 1px solid black; */
     display: none;
     list-style-type: none;
 }
@@ -102,14 +97,14 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
     margin: 0;
     margin-bottom: 2%;
+    padding: 0;
 }
 
 #dropdown-content-E li {
-    text-align: center;
     margin-bottom: 2%;
+    text-align: center;
 }
 
 #discover-E:hover #dropdown-content-E {
@@ -117,14 +112,12 @@ nav {
 }
 
 #discover-S {
-    /* border: 1px solid black; */
     width: 25%;
     height: auto;
     text-align: center;
 }
 
 #dropdown-content-S {
-    /* border: 1px solid black; */
     display: none;
     list-style-type: none;
 }
@@ -133,14 +126,14 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
     margin: 0;
     margin-bottom: 2%;
+    padding: 0;
 }
 
 #dropdown-content-S li {
-    text-align: center;
     margin-bottom: 2%;
+    text-align: center;
 }
 
 #discover-S:hover #dropdown-content-S {
@@ -154,13 +147,11 @@ nav {
 }
 
 section {
-    /* border: 1px solid black; */
     width: 100%;
     overflow: hidden;
 }
 
 main {
-    /* border: 1px solid black; */
     width: 75%;
     float: left;
 }
@@ -197,17 +188,15 @@ aside {
 #social-media {
     width: 100%;
     height: 45%;
+    margin: auto;
+    text-align: center;
     background-image: url(../Resources/Images/Posit.png);
     background-size: 80%;
     background-position: center center;
     background-repeat: no-repeat;
-    text-align: center;
-    margin: auto;
-    /* backdrop-filter: blur(.625rem); */
 }
 
 footer {
-    /* border: 1px solid black; */
     width: 100%;
     height: auto;
 }
@@ -219,21 +208,15 @@ section {
 }
 
 #contac {
-    /* border: 1px solid black; */
     text-align: center;
-    /* backdrop-filter: blur(.625rem); */
 }
 
 #subscribe {
-    /* border: 1px solid black; */
     text-align: center;
-    /* backdrop-filter: blur(.625rem); */
 }
 
 #policies {
-    /* border: 1px solid black; */
     text-align: center;
-    /* backdrop-filter: blur(.625rem); */
 }
 
 .icons {
@@ -241,9 +224,7 @@ section {
 }
 
 #copyright {
-    /* border: 1px solid black; */
     width: 25%;
-    text-align: center;
     margin: auto;
-    /* backdrop-filter: blur(.625rem); */
+    text-align: center;
 }

@@ -30,15 +30,19 @@ function agregarItem() {
 }
 
 function appendItemToList(item) {
+
   console.log("Agregando item a la lista:", item);
   let listaItem = document.createElement("li");
   let elementoTitulo = document.createElement("h2");
   elementoTitulo.textContent = item.title;
+
   let elementoImagen = document.createElement("img");
   elementoImagen.src = obtenerImagenLocal(item.photo) || elementoImagen.src;
   elementoImagen.alt = item.title;
+
   let elementoDescripcion = document.createElement("p");
   elementoDescripcion.textContent = item.content;
+
   let botonEliminar = document.createElement("button");
   botonEliminar.textContent = "Eliminar";
   botonEliminar.id = "btn-eliminar";
@@ -109,17 +113,11 @@ function modificarItem(item) {
     limpiarListaItems();
     cargarItems();
   });
+
   listItem.appendChild(cancelButton);
 
   document.getElementById("entry-content").appendChild(listItem);
 }
-
-
-
-
-
-
-
 
 function guardarImagenLocal(imagen) {
   let reader = new FileReader();
