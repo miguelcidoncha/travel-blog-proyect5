@@ -1,13 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Discover Europe</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
+        </script>
 </head>
+
 <body>
-    
+    <header>
+        <img id="logo" src="Resources/Images/Logo Discover Europe.png" alt="logo">
+    </header>
+    <hr>
+    <nav>
+        <div id="news">
+            <h2>Futuros viajes</h2>
+        </div>
+        <div id="discover-E">
+            <h2>Discover Europe</h2>
+            <div id="dropdown-content-E">
+                <ul>Destinos:</ul>
+                <li><a href="#" style="text-decoration: none; color: black;" onclick="loadSubPage('Views/discover.html', 'berlin')">Berlín <iconify-icon icon="emojione-v1:flag-for-germany" width="20" height="20"></iconify-icon></a></li>
+                <li><a href="#" style="text-decoration: none; color: black;" onclick="loadSubPage('Views/discover.html', 'sofia')">Sofía<iconify-icon icon="emojione-v1:flag-for-bulgaria" width="20" height="20"></iconify-icon></a></li>
+                <li><a href="#" style="text-decoration: none; color: black;" onclick="loadSubPage('Views/discover.html', 'budapest')">Budapest<iconify-icon icon="emojione-v1:flag-for-hungary" width="20" height="20"></iconify-icon></a></li>
+                <li><a href="#" style="text-decoration: none; color: black;" onclick="loadSubPage('Views/discover.html', 'praga')">Praga<iconify-icon icon="emojione-v1:flag-for-czechia" width="20" height="20"></iconify-icon></a></li>
+            </div>
+        </div>
+        <div id="discover-S">
+            <h2>Discover Spain</h2>
+            <div id="dropdown-content-S">
+                <ul>Destinos:</ul>
+                <li><a href="#" style="text-decoration: none; color: black;" onclick="loadSubPage('Views/discover.html', 'barcelona')">Barcelona<iconify-icon icon="emojione-v1:flag-for-spain" width="20" height="20"></iconify-icon></a></li>
+                <li><a href="#" style="text-decoration: none; color: black;" onclick="loadSubPage('Views/discover.html', 'granada')">Granada<iconify-icon icon="emojione-v1:flag-for-spain" width="20" height="20"></iconify-icon></a></li>
+                <li><a href="#" style="text-decoration: none; color: black;" onclick="loadSubPage('Views/discover.html', 'merida')">Mérida<iconify-icon icon="emojione-v1:flag-for-spain" width="20" height="20"></iconify-icon></a></li>
+                <li><a href="#" style="text-decoration: none; color: black;" onclick="loadSubPage('Views/discover.html', 'sevilla')">Sevilla<iconify-icon icon="emojione-v1:flag-for-spain" width="20" height="20"></iconify-icon></a></li>
+            </div>
+        </div>
+        <div id="admin">
+            <h2>Admin.</h2>
+        </div>
+    </nav>
+    <hr>
+    <section>
+        <main id="main-content"></main>
+        <aside>
+            <div id="map"></div><br>
+            <div id="social-media"><br><br>
+                <h3>Redes Sociales</h3>
+                <div class="icons">
+                    <i class="fa-brands fa-twitter" style="color: #2bb1a8;"></i>
+                    <i class="fa-brands fa-instagram" style="color: #db1a94;"></i>
+                    <i class="fa-brands fa-facebook" style="color: #386ecc;"></i>
+                    <i class="fa-brands fa-telegram" style="color: #42c5d7;"></i>
+                    <i class="fa-brands fa-youtube" style="color: #ec0909;"></i>
+                </div>
+            </div>
+        </aside>
+    </section>
+    <hr>
+    <footer>
+        <section>
+            <div id="contac">
+                <h4>Contacto</h4>
+                <p>discovereurope@info.es</p>
+                <p>Planifica tu viaje con nosotros</p>
+            </div>
+            <div id="subscribe">
+                <h4>Newsletter</h4>
+                <p>Suscríbase para recibir nuestras últimas noticias y poder comenatar nuestras publicaciones</p>
+                <form>
+                    <input type="text" placeholder="Ingresa tu nombre" required>
+                    <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                    <input type="submit" value="Suscribirse">
+                </form>
+            </div>
+            <div id="policies">
+                <h4>Preguntas Frecuentes (FAQ)</h4>
+                <h4>Política de Privacidad</h4>
+                <h4>Política de Cookies</h4>
+            </div>
+        </section>
+        <hr>
+        <div id="copyright">
+            <p>Discover Europe &copy; 2023</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
