@@ -136,7 +136,6 @@ function cargarItems() {
 }
 
 
-
 cargarItems();
 
 adminLoaded = true;
