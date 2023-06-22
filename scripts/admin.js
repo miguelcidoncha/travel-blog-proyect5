@@ -1,4 +1,4 @@
-if(!adminLoaded){
+if (!adminLoaded) {
   let form = document.getElementById('entry-form');
   let entryContent = document.getElementById('entry-content');
   let newEntry = document.getElementById("new-entry");
@@ -60,6 +60,66 @@ function appendItemToList(item) {
   listaItem.appendChild(botonModificar);
   document.getElementById("entry-content").appendChild(listaItem);
 }
+
+function modificarItem(item) {
+  let listItem = document.createElement("li");
+
+  let titleInput = document.createElement("input");
+  titleInput.value = item.title;
+  listItem.appendChild(titleInput);
+
+  let contentInput = document.createElement("textarea");
+  contentInput.value = item.content;
+  listItem.appendChild(contentInput);
+
+  let saveButton = document.createElement("button");
+  saveButton.textContent = "Guardar";
+  saveButton.addEventListener("click", function () {
+    let updatedTitle = titleInput.value;
+    let updatedContent = contentInput.value;
+
+    if (updatedTitle !== "" && updatedContent !== "") {
+      item.title = updatedTitle;
+      item.content = updatedContent;
+
+      let storedItems = JSON.parse(localStorage.getItem("items")) || [];
+      let updatedItems = storedItems.map(function (el) {
+        if (
+          el.title === item.title &&
+          el.photo === item.photo &&
+          el.content === item.content
+        ) {
+          return item;
+        }
+        return el;
+      });
+
+      localStorage.setItem("items", JSON.stringify(updatedItems));
+      limpiarListaItems();
+      updatedItems.forEach(function (item) {
+        appendItemToList(item);
+      });
+    }
+  });
+  listItem.appendChild(saveButton);
+
+  let cancelButton = document.createElement("button");
+  cancelButton.textContent = "Cancelar";
+  cancelButton.addEventListener("click", function () {
+    limpiarListaItems();
+    cargarItems();
+  });
+  listItem.appendChild(cancelButton);
+
+  document.getElementById("entry-content").appendChild(listItem);
+}
+
+
+
+
+
+
+
 
 function guardarImagenLocal(imagen) {
   let reader = new FileReader();
