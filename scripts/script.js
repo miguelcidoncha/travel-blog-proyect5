@@ -66,7 +66,7 @@ let loadAdmin = function (viewLocation) {
   let mainContent = $("#main-content");
 
   function loadCallback() {
-    console.log("Contenido de admin.html cargado exitosamente");
+    console.log("Contenido cargado exitosamente");
   }
 
   mainContent.load(viewLocation, loadCallback);
@@ -83,7 +83,7 @@ let loadNews = function (viewLocation) {
   let mainContent = $("#main-content");
 
   function loadCallback() {
-    console.log("Contenido de admin.html cargado exitosamente");
+    console.log("Contenido cargado exitosamente");
   }
 
   mainContent.load(viewLocation, loadCallback);
